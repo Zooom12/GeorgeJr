@@ -5,19 +5,19 @@ module.exports = {
         name: `open-ticket`
     },
     async execute(interaction, client) {
-        const guild = client.guilds.cache.get("760718870251175968");
+        const guild = client.guilds.cache.get("979800967715364885");
         const interactionUser = await interaction.guild.members.fetch(interaction.user.id)
         const userName = interactionUser.user.username;
         guild.channels.create({
             name: `ticket-${userName}`,
             type: ChannelType === 'GUILD_TEXT',
-            parent: "1002028601937498182",
+            parent: "1003127044227477585",
             permissionOverwrites: [{
                 id: interaction.user.id,
                 allow: [PermissionFlagsBits.SendMessages, PermissionFlagsBits.ViewChannel],
               },
               {
-                id: "1001174495744245760",
+                id: "1002052912723275908",
                 allow: [PermissionFlagsBits.SendMessages, PermissionFlagsBits.ViewChannel],
               },
               {
