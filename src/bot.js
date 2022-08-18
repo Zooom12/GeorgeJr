@@ -2,7 +2,7 @@ require("dotenv").config();
 const { token } = process.env;
 const { Client, GatewayIntentBits, Collection, Partials } = require('discord.js');
 const fs = require("fs");
-const blacklist = ['nigger', 'faggot', 'chingchong', 'ching-chong', 'chink', 'curry muncher', 'curry-muncher', 'dink', 'dyke', 'niglet', 'tranny', 'fag', 'kys', 'kill your self', 'kill urself', 'beaner'];
+const blacklist = ['nigger', 'nigga', 'nig', 'faggot', 'chingchong', 'ching-chong', 'chink', 'curry muncher', 'curry-muncher', 'dink', 'dyke', 'niglet', 'tranny', 'fag', 'kys', 'kill your self', 'kill urself', 'kill ur self', 'beaner'];
 
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent], partials: [Partials.Channel] });
