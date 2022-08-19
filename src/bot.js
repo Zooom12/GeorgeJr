@@ -11,6 +11,12 @@ client.modals = new Collection();
 client.buttons = new Collection();
 client.commandArray = [];
 
+client.on("ready", () => {
+  client.user.setActivity('Commiting Tax Evasion', { type: ActivityType.Playing });
+  }
+)
+
+
 const functionFolders = fs.readdirSync(`./src/functions`);
 for (const folder of functionFolders) {
   const functionFiles = fs
