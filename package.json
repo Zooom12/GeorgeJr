@@ -1,7 +1,6 @@
 {
   "name": "georgebot",
   "version": "1.0.0",
-  "description": "",
   "main": "src/bot.js",
   "scripts": {
     "test": "node ."
@@ -17,5 +16,7 @@
     "discord.js": "^14.0.3",
     "dotenv": "^16.0.1",
     "mezur": "^2.7.2"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
