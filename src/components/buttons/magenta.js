@@ -10,12 +10,12 @@ const remove = require("../../remove.js");
 const member = require("discord.js");
 module.exports = {
   data: {
-    name: "brown",
+    name: "magenta",
   },
   async execute(interaction, client) {
     const { roles } = interaction.member;
     const role = await interaction.guild.roles
-      .fetch("1007145995655716924")
+      .fetch("1007145703119798382")
       .catch(console.error);
       
 
