@@ -21,7 +21,7 @@ module.exports = {
                });
 
             interaction.reply({
-                content: "Idea Has Been Sent",
+                content: `Idea Has Been Sent In <#996958233887518791>`,
                 ephemeral: true
             })
     }

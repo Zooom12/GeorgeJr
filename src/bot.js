@@ -16,7 +16,6 @@ client.on("ready", () => {
   }
 )
 
-
 const functionFolders = fs.readdirSync(`./src/functions`);
 for (const folder of functionFolders) {
   const functionFiles = fs
