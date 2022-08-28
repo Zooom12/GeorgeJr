@@ -1,4 +1,4 @@
-const rolearray = require('../../roles')
+const { rolearray } = require('../../roles.json');
 const { ChannelType } = require("discord-api-types/v9");
 const {
   PermissionFlagsBits,
@@ -12,7 +12,7 @@ const member = require("discord.js");
 
 module.exports = {
   data: {
-    name: "navyblue",
+    name: "blue",
   },
   async execute(interaction, client) {
     const { roles } = interaction.member;
