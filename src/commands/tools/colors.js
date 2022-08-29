@@ -3,7 +3,8 @@ const {ActionRowBuilder, ButtonBuilder, ButtonStyle, SlashCommandBuilder, EmbedB
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('colors')
-        .setDescription('Shows All Color Roles'),
+        .setDescription('Shows All Color Roles')
+        .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels),
     async execute(interaction, client) {
         const file = new AttachmentBuilder('./colors.png');
         const embed = new EmbedBuilder() 
