@@ -17,20 +17,18 @@ module.exports = {
       .fetch("1003494746142036018")
       .catch(console.error);
   
-      if (roles.add(role)) {
+      if (roles.cache.has("1003494746142036018")) {
         roles.remove("1003494746142036018")
       await interaction.reply({
         content: "Role Removed",
-        ephemeral: true
-    })
-} else {
-  roles.add(role)
-  await interaction.reply({ 
-content: "Role Added",
-ephemeral: true
-})
-
-}
+        ephemeral: true,
+      });
+    } else {
+      roles.add(role);
+      await interaction.reply({
+        content: "Role Added",
+        ephemeral: true,
+      });
 
   
   }}
