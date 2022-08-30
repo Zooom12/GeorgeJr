@@ -5,7 +5,7 @@ const fs = require("fs");
 const blacklist = ['nigger', 'faggot', 'chingchong', 'ching-chong', 'chink', 'curry muncher', 'curry-muncher', 'dink', 'dyke', 'niglet', 'tranny', 'fag', 'kys', 'kill your self', 'kill urself', 'beaner'];
 
 
-const client = new Client({ intents: [131071], partials: [Partials.Channel] });
+const client = new Client({ intents: 131071, partials: [Partials.Channel] });
 client.commands = new Collection();
 client.modals = new Collection();
 client.buttons = new Collection();
