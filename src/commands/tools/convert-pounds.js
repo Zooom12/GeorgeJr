@@ -1,6 +1,5 @@
 const { SlashCommandBuilder } = require("discord.js");
-const { pounds, kilograms } = require("mezur/mass");
-const mass = require("mezur/mass");
+
 
 module.exports = {
   data: new SlashCommandBuilder()
