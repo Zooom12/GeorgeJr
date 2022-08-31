@@ -7,7 +7,7 @@ module.exports = {
     async execute(interaction, client) {
         let updates = new ButtonBuilder()
                 .setCustomId('updates')
-                .setLabel('Get Notified For Bot Updates')
+                .setLabel('Get notified for bot updates')
                 .setStyle(ButtonStyle.Primary)
 
                 interaction.reply({
