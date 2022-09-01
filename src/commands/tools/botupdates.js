@@ -1,9 +1,10 @@
-const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder } = require('discord.js');
+const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, PermissionFlagsBits, ActionRowBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('updates')
-        .setDescription('Gives The Notification Roles'),
+        .setDescription('Gives The Notification Roles')
+        .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels),
     async execute(interaction, client) {
         let updates = new ButtonBuilder()
                 .setCustomId('updates')
