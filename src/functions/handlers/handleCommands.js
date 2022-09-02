@@ -20,12 +20,20 @@ module.exports = (client) => {
 
     const clientId = "997006819035717763";
     const guildId = "979800967715364885";
+    
+
     const rest = new REST({ version: "9" }).setToken(process.env.token);
+
+    rest.delete(Routes.applicationGuildCommand(clientId, guildId, '1015355116922089493'))
+	  .then(() => console.log('Successfully deleted guild command'))
+	  .catch(console.error);
+
+
     try {
       console.log('Started refreshing application (/) commands.');
   
       await rest.put(
-        Routes.applicationGuildCommands(clientId, guildId),
+        Routes.applicationCommands(clientId),
         { body: client.commandArray },
       );
   
@@ -33,6 +41,9 @@ module.exports = (client) => {
     } catch (error) {
       console.error(error);
     }
+
+
+    
   
     };
 };

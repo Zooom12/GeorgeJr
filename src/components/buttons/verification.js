@@ -19,12 +19,6 @@ module.exports = {
 
 
 
-      if (roles.cache.has("979807453308940398")) {
-      await interaction.reply({
-        content: "Sorry, I Wont Remove Your Access To The Server",
-        ephemeral: true,
-      });
-    } else {
       roles.add(role);
       await interaction.reply({
         content: "Role Added",

@@ -16,8 +16,8 @@ module.exports = {
     const role = await interaction.guild.roles
       .fetch("1003494746142036018")
       .catch(console.error);
-  
-      if (roles.cache.has("1003494746142036018")) {
+
+    if (roles.cache.has("1003494746142036018")) {
         roles.remove("1003494746142036018")
       await interaction.reply({
         content: "Role Removed",
@@ -29,6 +29,6 @@ module.exports = {
         content: "Role Added",
         ephemeral: true,
       });
-
-  
-  }}
+    }
+  },
+};
