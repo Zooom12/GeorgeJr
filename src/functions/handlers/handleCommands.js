@@ -24,9 +24,7 @@ module.exports = (client) => {
 
     const rest = new REST({ version: "9" }).setToken(process.env.token);
 
-    rest.delete(Routes.applicationGuildCommand(clientId, guildId, '1015355116922089493'))
-	  .then(() => console.log('Successfully deleted guild command'))
-	  .catch(console.error);
+    
 
 
     try {
