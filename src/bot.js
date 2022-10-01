@@ -12,7 +12,7 @@ client.buttons = new Collection();
 client.commandArray = [];
 
 client.on("ready", () => {
-  client.user.setActivity('Commiting Tax Evasion', { type: ActivityType.Playing });
+  client.user.setActivity('Committing Tax Evasion', { type: ActivityType.Playing });
   }
 )
 
