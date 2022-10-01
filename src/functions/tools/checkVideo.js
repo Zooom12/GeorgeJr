@@ -46,8 +46,7 @@ module.exports = (client) => {
       
 
     })
-    await channelId.send({ embeds: [embed]})
-    await channelId.send("<@1021181286817214565>")
+    await channelId.send({ embeds: [embed] content: "<@1021181286817214565>"})
 
   };
 };
