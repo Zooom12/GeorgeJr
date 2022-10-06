@@ -1,21 +1,24 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder } = require("discord.js");
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('help')
-        .setDescription('Shows All Commands And Features'),
+        .setDescription('Shows All Commands'),
     async execute(interaction, client) {
-        const embed = new EmbedBuilder() 
-            .setColor('6d6ee8')
-            .setTitle('Help Menu')
-            .setDescription('/comvert-kilos Converts Kilos To Pounds')
-            .setDescription('/convert-pounds Converts Pounds To Kilos')
-            .setDescription('Click The Button In #create-ticket To Get In Contact With Staff')
-            .setDescription("Get Your Roles In #role-assignments")
-            .setDescription('Get Your Color Roles In #choose-your-color')
-
+        const help = new EmbedBuilder()
+            .setColor(0x0099FF)
+            .addFields(
+                { name: 'Commands:', value: '\u200B'},
+                { name: '</convert-kilos:1021124538425155607>', value: 'Converts Kilograms to Pounds' },
+                { name: '</convert-pounds:1001599074501410981>', value:  'Converts Pounds To Kilograms' },
+                { name: '</convert-kilometers:1021187497289592852>', value:  'Converts Kilometers To Miles' },
+                { name: '</convert-miles:'}
+            )
+            .setAuthor({ name: `George's Help Menu`, iconURL: client.user.displayAvatarURL() })
+        
         interaction.reply({
-            embeds: [embed]
+            embeds: [help]
         })
+        
     }
 }
